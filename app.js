@@ -24,7 +24,7 @@ require('./config/passport')(passport);
 const keys = require('./config/keys');
 
 // Handlebars Helpers
-const {truncate, stripTags, formatDate, select} = require('./helpers/hbs');
+const {truncate, stripTags, formatDate, select, editIcon} = require('./helpers/hbs');
 
 // Map global promises
 mongoose.Promise = global.Promise;
@@ -49,7 +49,8 @@ app.engine('handlebars', hbs({
     truncate,
     stripTags,
     formatDate,
-    select
+    select,
+    editIcon
   },
   defaultLayout: 'main'
 }));
